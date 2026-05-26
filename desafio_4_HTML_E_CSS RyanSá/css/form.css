@@ -1,0 +1,150 @@
+/* ── Página Contato ── */
+.pagina-contato {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 100px 80px;
+    flex-wrap: wrap;
+}
+
+.contato-imagem img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contato-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.contato-formulario h2 {
+    margin: 0 0 5px;
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.contato-formulario input,
+.contato-formulario select,
+.contato-formulario textarea {
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.contato-formulario input:focus,
+.contato-formulario select:focus,
+.contato-formulario textarea:focus {
+    outline: none;
+    border-color: #1351d8;
+}
+
+.contato-formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Radio group */
+.radio-label {
+    font-size: 0.9rem;
+    color: #807d7d;
+    font-family: 'Roboto', sans-serif;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.radio-group label:hover {
+    color: #1351d8;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #1351d8;
+    cursor: pointer;
+}
+
+/* Botão enviar */
+.contato-formulario button {
+    margin-top: 6px;
+    padding: 15px;
+    background: #1351d8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.contato-formulario button:hover {
+    background: #1b357e;
+    transform: scale(1.05);
+}
+
+.contato-formulario button:active {
+    transform: scale(0.98);
+}
+
+/* Mensagem de agradecimento */
+#mensagem-agradecimento {
+    display: none;
+    padding: 16px 20px;
+    background: #eef3ff;
+    border-left: 4px solid #1351d8;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    animation: fadeIn 0.4s ease;
+}
+
+#mensagem-agradecimento p + p {
+    margin-top: 6px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .pagina-contato {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 20px;
+        gap: 25px;
+    }
+
+    .contato-imagem img {
+        max-width: 280px;
+    }
+
+    .contato-formulario {
+        max-width: 100%;
+    }
+}

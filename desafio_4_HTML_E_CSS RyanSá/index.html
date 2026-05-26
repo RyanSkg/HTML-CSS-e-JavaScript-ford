@@ -1,71 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Sá" />
-    <meta
-      name="description"
-      content="Conheça a nova Ford Ranger 2022. Potência, tecnologia e design para quem busca o melhor em picapes."
-    />
-    <title>Home - Ford Ranger 2022</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
     <header class="site-header">
-      <nav class="site-header__logo">
-        <a href="index.html">
-          <img src="img/logo-ford-256.png" alt="Logo da Ford" width="150" />
-        </a>
-      </nav>
-
-      <nav class="site-header__nav">
-        <a href="index.html">Home</a> /
-        <a href="lancamento.html">Lançamento</a> /
-        <a href="contato.html">Contato</a>
-      </nav>
+        <div class="site-header__logo">
+            <img src="img/logo-ford-256.png" alt="Logo Ford">
+        </div>
+        <nav class="site-header__nav">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
     </header>
 
     <main class="site-main">
-      <div class="hero-section">
-        <a href="lancamento.html">
-          <img src="img/imagem_1.jpg" alt="Ford Ranger 2022" />
-        </a>
-
-        <p class="hero-section__texto">
-          Essa é a nova Ford Ranger 2022. Verifique as novidades
-          <a href="lancamento.html">aqui!</a>
-        </p>
-      </div>
+        <div class="hero-section">
+            <div id="carousel"></div>
+            <div id="carousel-title"></div>
+        </div>
     </main>
 
     <footer class="rodape">
-      <div class="rodape__redes">
-        <span class="rodape__redes-titulo">Redes Sociais:</span>
-
-        <a href="https://www.facebook.com/ford" target="_blank">
-          <img src="img/facebook-50.png" alt="Facebook Logo" width="30" />
-        </a>
-
-        <a href="https://www.instagram.com/ford" target="_blank">
-          <img
-            src="img/instagram-logo-50.png"
-            alt="Instagram Logo"
-            width="30"
-          />
-        </a>
-
-        <a href="https://www.youtube.com/ford" target="_blank">
-          <img src="img/youtube-squared-50.png" alt="YouTube Logo" width="30" />
-        </a>
-      </div>
-
-      <section class="rodape__copyright">
-        <p>&copy; 2022 Ford Motor Company. Todos os direitos reservados.</p>
-      </section>
-
-      <img class="rodape__logo" src="img/ford-96.png" alt="Ford Logo" />
+        <div class="rodape__redes">
+            <span class="rodape__redes-titulo">Redes Sociais</span>
+            <a href="https://www.facebook.com/ford" title="Facebook"><img src="img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/ford" title="YouTube"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/ford" title="Instagram"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+        <img src="img/ford-96.png" class="rodape__logo" alt="Ford">
     </footer>
-  </body>
+
+    <script src="js/carousel.js"></script>
+    <script>
+        carouselArr.push(new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
+        carouselArr.push(new Carousel("img/imagem_2.jpg", "Ford a nossa história", "#"));
+        carouselArr.push(new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html"));
+        Carousel.Start(carouselArr);
+    </script>
+</body>
 </html>

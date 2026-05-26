@@ -1,0 +1,226 @@
+/* ── Página Lançamento ── */
+.pagina-lancamento {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+}
+
+/* Vídeo */
+.video-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Descrição do produto */
+.produto-descricao {
+    max-width: 860px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.produto-descricao h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.produto-descricao p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Grade de veículos */
+.grade-veiculos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.veiculo-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.veiculo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.veiculo-card input[type="checkbox"] {
+    display: none;
+}
+
+.veiculo-card__checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.veiculo-card input:checked + .veiculo-card__checkbox {
+    background: #1351d8;
+    border-color: #1351d8;
+}
+
+.veiculo-card__checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.veiculo-card input:checked + .veiculo-card__checkbox::after {
+    display: block;
+}
+
+.veiculo-card__nome {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+.veiculo-card__preco {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+.veiculo-card:hover {
+    transform: scale(1.03);
+    border-color: #1351d8;
+}
+
+.veiculo-card input:checked ~ .veiculo-card__nome,
+.veiculo-card input:checked ~ .veiculo-card__preco {
+    color: #1351d8;
+}
+
+/* Botão comparar */
+.btn-comparar-wrapper {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.btn-comparar {
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1351d8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-comparar:hover {
+    background-color: #1b357e;
+    transform: scale(1.05);
+}
+
+/* Pop-up comparação */
+#compare {
+    position: fixed;
+    display: none;
+    width: min(90vw, 700px);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+}
+
+td:nth-child(1) {
+    font-weight: 700;
+    width: 35%;
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+
+.btn-fechar-wrapper {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn-fechar {
+    padding: 10px 28px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1351d8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fechar:hover {
+    background-color: #1b357e;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .pagina-lancamento {
+        padding: 15px;
+    }
+
+    .grade-veiculos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .veiculo-card {
+        width: 90%;
+        max-width: 320px;
+    }
+}

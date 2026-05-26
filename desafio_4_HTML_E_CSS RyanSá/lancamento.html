@@ -1,112 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Sá" />
-    <meta
-      name="description"
-      content="Veja o vídeo de lançamento e compare os modelos da nova Ford Ranger 2022: XL, XLS e Storm."
-    />
-    <title>Lançamento - Ford Ranger 2022</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/lancamento.css" rel="stylesheet">
+    <script src="js/compare.js"></script>
+</head>
+<body>
     <header class="site-header">
-      <nav class="site-header__logo">
-        <a href="index.html">
-          <img src="img/logo-ford-256.png" alt="Logo da Ford" width="150" />
-        </a>
-      </nav>
-
-      <nav class="site-header__nav">
-        <a href="index.html">Home</a> /
-        <a href="lancamento.html">Lançamento</a> /
-        <a href="contato.html">Contato</a>
-      </nav>
+        <div class="site-header__logo">
+            <img src="img/logo-ford-256.png" alt="Logo Ford">
+        </div>
+        <nav class="site-header__nav">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
     </header>
 
-    <main class="pagina-lancamento">
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/vQsryuNmsL0?autoplay=1&mute=1&controls=0&loop=1&playlist=vQsryuNmsL0"
-          title="YouTube video player"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-          "
-          allowfullscreen
-        ></iframe>
-      </div>
+    <main class="site-main pagina-lancamento">
 
-      <p class="hero-section__texto">
-        Confira o vídeo de lançamento da nova Ford Ranger 2022. Para mais
-        detalhes, visite o site oficial da Ford
-        <a href="https://www.ford.com.br/picapes/ranger/" target="_blank"
-          >aqui!</a
-        >
-      </p>
+        <div class="video-container">
+            <iframe src="https://www.youtube-nocookie.com/embed/vQsryuNmsL0?controls=0&autoplay=1&modestbranding=0&loop=1&mute=1&rel=0&hd=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
 
-      <div class="grade-veiculos">
-        <label class="veiculo-card">
-          <img src="img/XL Cabine.jpg" alt="Ford Ranger XL" />
-          <input type="checkbox" />
-          <span class="veiculo-card__checkbox"></span>
-          <p class="veiculo-card__nome">Ranger XL</p>
-          <p class="veiculo-card__preco">R$ 189.990</p>
-        </label>
+        <div class="produto-descricao">
+            <h2>Ford Ranger 2022</h2>
+            <p>
+                A nova Ford Ranger 2022 chega com design renovado, tecnologia de ponta e desempenho superior
+                para encarar qualquer terreno. Com motores potentes, cabine espaçosa e sistemas avançados de
+                segurança, ela redefine o padrão das picapes médias. Disponível nas versões XL, XLS e Storm —
+                escolha a que combina com o seu estilo.
+            </p>
+        </div>
 
-        <label class="veiculo-card">
-          <img src="img/xls 2.2 diesel.jpg" alt="Ford Ranger XLS" />
-          <input type="checkbox" />
-          <span class="veiculo-card__checkbox"></span>
-          <p class="veiculo-card__nome">Ranger XLS</p>
-          <p class="veiculo-card__preco">R$ 209.990</p>
-        </label>
+        <div class="grade-veiculos">
 
-        <label class="veiculo-card">
-          <img src="img/storm.jpg" alt="Ford Ranger Storm" />
-          <input type="checkbox" />
-          <span class="veiculo-card__checkbox"></span>
-          <p class="veiculo-card__nome">Ranger Storm</p>
-          <p class="veiculo-card__preco">R$ 229.990</p>
-        </label>
-      </div>
+            <label class="veiculo-card">
+                <img src="img/XL Cabine.jpg" alt="Ford Ranger XL">
+                <input type="checkbox" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 'img/XL Cabine.jpg'));">
+                <span class="veiculo-card__checkbox"></span>
+                <p class="veiculo-card__nome">XL Cabine Simples 2.2 Diesel 4X4 MT 2022</p>
+                <p class="veiculo-card__preco">Preço Sugerido: R$ 183.850</p>
+            </label>
 
-      <button class="btn-comparar">Comparar Carros</button>
+            <label class="veiculo-card">
+                <img src="img/xls 2.2 diesel.jpg" alt="Ford Ranger XLS">
+                <input type="checkbox" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', 'img/xls 2.2 diesel.jpg'));">
+                <span class="veiculo-card__checkbox"></span>
+                <p class="veiculo-card__nome">XLS 2.2 Diesel 4X4 AT 2022</p>
+                <p class="veiculo-card__preco">Preço Sugerido: R$ 220.690</p>
+            </label>
+
+            <label class="veiculo-card">
+                <img src="img/storm.jpg" alt="Ford Ranger Storm">
+                <input type="checkbox" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 'img/storm.jpg'));">
+                <span class="veiculo-card__checkbox"></span>
+                <p class="veiculo-card__nome">Storm 3.2 Diesel 4X4 AT 2022</p>
+                <p class="veiculo-card__preco">Preço Sugerido: R$ 222.790</p>
+            </label>
+
+        </div>
+
+        <div class="btn-comparar-wrapper">
+            <button class="btn-comparar" type="button" onclick="ShowCompare()">Comparar Carros</button>
+        </div>
+
     </main>
 
     <footer class="rodape">
-      <div class="rodape__redes">
-        <span class="rodape__redes-titulo">Redes Sociais:</span>
-
-        <a href="https://www.facebook.com/ford" target="_blank">
-          <img src="img/facebook-50.png" alt="Facebook Logo" width="30" />
-        </a>
-
-        <a href="https://www.instagram.com/ford" target="_blank">
-          <img
-            src="img/instagram-logo-50.png"
-            alt="Instagram Logo"
-            width="30"
-          />
-        </a>
-
-        <a href="https://www.youtube.com/ford" target="_blank">
-          <img src="img/youtube-squared-50.png" alt="YouTube Logo" width="30" />
-        </a>
-      </div>
-
-      <section class="rodape__copyright">
-        <p>&copy; 2022 Ford Motor Company. Todos os direitos reservados.</p>
-      </section>
-
-      <img class="rodape__logo" src="img/ford-96.png" alt="Ford Logo" />
+        <div class="rodape__redes">
+            <span class="rodape__redes-titulo">Redes Sociais</span>
+            <a href="https://www.facebook.com/ford" title="Facebook"><img src="img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/ford" title="YouTube"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/ford" title="Instagram"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+        <img src="img/ford-96.png" class="rodape__logo" alt="Ford">
     </footer>
-  </body>
+
+    <div id="compare">
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td id="compare_image_0"></td>
+                    <td id="compare_image_1"></td>
+                </tr>
+                <tr>
+                    <td>Modelo</td>
+                    <td id="compare_modelo_0"></td>
+                    <td id="compare_modelo_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura da ca&ccedil;amba (mm)</td>
+                    <td id="compare_alturacacamba_0"></td>
+                    <td id="compare_alturacacamba_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura do ve&iacute;culo (mm)</td>
+                    <td id="compare_alturaveiculo_0"></td>
+                    <td id="compare_alturaveiculo_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura livre do solo (mm)</td>
+                    <td id="compare_alturasolo_0"></td>
+                    <td id="compare_alturasolo_1"></td>
+                </tr>
+                <tr>
+                    <td>Capacidade de carga (Kg)</td>
+                    <td id="compare_capacidadecarga_0"></td>
+                    <td id="compare_capacidadecarga_1"></td>
+                </tr>
+                <tr>
+                    <td>Motor</td>
+                    <td id="compare_motor_0"></td>
+                    <td id="compare_motor_1"></td>
+                </tr>
+                <tr>
+                    <td>Pot&ecirc;ncia (cv)</td>
+                    <td id="compare_potencia_0"></td>
+                    <td id="compare_potencia_1"></td>
+                </tr>
+                <tr>
+                    <td>Volume de ca&ccedil;amba (L)</td>
+                    <td id="compare_volumecacamba_0"></td>
+                    <td id="compare_volumecacamba_1"></td>
+                </tr>
+                <tr>
+                    <td>Roda</td>
+                    <td id="compare_roda_0"></td>
+                    <td id="compare_roda_1"></td>
+                </tr>
+                <tr>
+                    <td>Pre&ccedil;o</td>
+                    <td id="compare_preco_0"></td>
+                    <td id="compare_preco_1"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-fechar-wrapper">
+            <button class="btn-fechar" type="button" onclick="HideCompare()">Fechar</button>
+        </div>
+    </div>
+
+</body>
 </html>

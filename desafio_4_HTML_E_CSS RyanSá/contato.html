@@ -1,89 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Sá" />
-    <meta
-      name="description"
-      content="Entre em contato com a Ford e saiba mais sobre a nova Ranger 2022. Preencha o formulário e fale com um de nossos especialistas."
-    />
-    <title>Contato - Ford Ranger 2022</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script src="js/form.js"></script>
+</head>
+<body>
     <header class="site-header">
-      <nav class="site-header__logo">
-        <a href="index.html">
-          <img src="img/logo-ford-256.png" alt="Logo da Ford" width="150" />
-        </a>
-      </nav>
-
-      <nav class="site-header__nav">
-        <a href="index.html">Home</a> /
-        <a href="lancamento.html">Lançamento</a> /
-        <a href="contato.html">Contato</a>
-      </nav>
+        <div class="site-header__logo">
+            <img src="img/logo-ford-256.png" alt="Logo Ford">
+        </div>
+        <nav class="site-header__nav">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
     </header>
 
     <main class="site-main">
-      <section class="pagina-contato">
-        <div class="contato-imagem">
-          <img src="img/xls 2.2 diesel.jpg" alt="Ford Ranger" />
+        <div class="pagina-contato">
+
+            <div class="contato-imagem">
+                <img src="img/xls 2.2 diesel.jpg" alt="Ford Ranger XLS">
+            </div>
+
+            <div class="contato-formulario">
+                <h2>Sobre Você</h2>
+
+                <form onsubmit="Post(this); return false;">
+
+                    <input type="text" name="nome" placeholder="NOME*" required>
+
+                    <input type="email" name="email" placeholder="E-MAIL*" required>
+
+                    <input type="tel" name="telefone" placeholder="TELEFONE*" required>
+
+                    <span class="radio-label">TIPO DE CONTATO*</span>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="tipo" value="elogio" required> Elogio
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo" value="reclamacao"> Reclamação
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo" value="solicitacao"> Solicitação
+                        </label>
+                    </div>
+
+                    <textarea name="mensagem" placeholder="MENSAGEM*" required></textarea>
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+
+                <div id="mensagem-agradecimento"></div>
+
+            </div>
         </div>
-
-        <form class="contato-formulario">
-          <h3>Sobre você</h3>
-
-          <input type="text" placeholder="Nome*" required />
-
-          <input type="text" placeholder="Sobrenome*" required />
-
-          <input type="email" placeholder="E-mail*" required />
-
-          <input type="tel" placeholder="Telefone*" required />
-
-          <select name="tipo-contato">
-            <option value="">Tipo de contato</option>
-            <option value="elogio">Elogio</option>
-            <option value="reclamacao">Reclamação</option>
-            <option value="solicitacao">Solicitação</option>
-          </select>
-
-          <textarea placeholder="Mensagem"></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
     </main>
 
     <footer class="rodape">
-      <div class="rodape__redes">
-        <span class="rodape__redes-titulo">Redes Sociais:</span>
-
-        <a href="https://www.facebook.com/ford" target="_blank">
-          <img src="img/facebook-50.png" alt="Facebook Logo" width="30" />
-        </a>
-
-        <a href="https://www.instagram.com/ford" target="_blank">
-          <img
-            src="img/instagram-logo-50.png"
-            alt="Instagram Logo"
-            width="30"
-          />
-        </a>
-
-        <a href="https://www.youtube.com/ford" target="_blank">
-          <img src="img/youtube-squared-50.png" alt="YouTube Logo" width="30" />
-        </a>
-      </div>
-
-      <section class="rodape__copyright">
-        <p>&copy; 2022 Ford Motor Company. Todos os direitos reservados.</p>
-      </section>
-
-      <img class="rodape__logo" src="img/ford-96.png" alt="Ford Logo" />
+        <div class="rodape__redes">
+            <span class="rodape__redes-titulo">Redes Sociais</span>
+            <a href="https://www.facebook.com/ford" title="Facebook"><img src="img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/ford" title="YouTube"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/ford" title="Instagram"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+        <img src="img/ford-96.png" class="rodape__logo" alt="Ford">
     </footer>
-  </body>
+
+</body>
 </html>
